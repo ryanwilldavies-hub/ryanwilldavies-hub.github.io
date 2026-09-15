@@ -1,1 +1,0 @@
-import{n as e,r as t}from"./button-3z0Vz53j.js";var n=t();function r({src:t,alt:r,className:i}){return(0,n.jsx)(`img`,{src:t,alt:r,className:e(`object-cover outline outline-1 -outline-offset-1 outline-ink/10`,i)})}export{r as t};
