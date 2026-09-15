@@ -1,0 +1,8 @@
+# This prototype is noindex until it replaces the live fvcl.ca.
+# Crawlers may still fetch / so they can read titles, descriptions, and JSON-LD.
+User-agent: *
+Allow: /
+Disallow: /insights
+Disallow: /for-dr-chu
+
+Sitemap: https://fvcl.ca/sitemap.xml
