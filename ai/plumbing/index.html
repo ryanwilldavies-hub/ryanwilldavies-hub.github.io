@@ -1,0 +1,18 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Fraser Valley Plumbing Co. - DEMO</title><link rel="stylesheet" href="../style.css"></head><body>
+<div class="demo">DEMO SITE: Fraser Valley Plumbing Co. is a fictional business. <a href="../">Built by Ryan's AI Setups</a></div>
+<div class="hero"><h1>Fraser Valley Plumbing Co. <small>(DEMO)</small></h1><p>Leaks, water heaters, drains and renos across Abbotsford, Mission, Chilliwack and Langley.</p><a class="btn" href="#quote">Get a free quote</a></div>
+<section><h2>Services</h2><div class="grid">
+<div class="card"><h3>Emergency Repairs</h3><p>Burst pipes, leaks and backups.</p></div>
+<div class="card"><h3>Water Heaters</h3><p>Tank and tankless installs and repairs.</p></div>
+<div class="card"><h3>Drain Cleaning</h3><p>Camera inspection and hydro-jetting.</p></div>
+<div class="card"><h3>Renovations</h3><p>Kitchen and bathroom rough-ins and fixtures.</p></div></div></section>
+<section id="quote"><h2>Request a Quote</h2><p class="note">Try it: fill this in and watch the instant reply. (Demo only: nothing is sent and no data is stored.)</p>
+<form id="f" class="card"><label>Name<input id="n" required></label><label>Email<input id="e" type="email" required></label><label>City<select id="c"><option>Abbotsford</option><option>Mission</option><option>Chilliwack</option><option>Langley</option></select></label><label>What do you need?<select id="s"><option>Leak or burst pipe</option><option>Water heater</option><option>Blocked drain</option><option>Renovation</option><option>Other</option></select></label><label>Details<textarea id="d" rows="3"></textarea></label><button class="btn">Send request</button></form>
+<div id="out" style="display:none"><p><b>Instant reply sent <span id="t"></span>:</b></p><div class="msg" id="m"></div><p class="note">In a real setup this reply is emailed to the customer within seconds, and the owner gets the lead by email/text at the same time.</p></div></section>
+<footer class="note">Fictional demo business. Want this for your company? <a href="../">Ryan's AI Setups</a></footer>
+<script>
+const tips={"Leak or burst pipe":"If water is actively leaking, shut off your main water valve (usually near the water meter or where the line enters the house) to limit damage.","Water heater":"Note the brand and age from the label on the tank if you can; it helps us quote accurately.","Blocked drain":"Avoid chemical drain cleaners for now; they can damage pipes and make the job harder.","Renovation":"Photos of the current space and any plans you have will help us give a tighter estimate.","Other":"Any photos you can send will help us give you a faster answer."};
+f.onsubmit=e=>{e.preventDefault();const first=n.value.trim().split(" ")[0];const urgent=s.value=="Leak or burst pipe";
+m.textContent=`Hi ${first},\n\nThanks for reaching out to Fraser Valley Plumbing Co. about your ${s.value.toLowerCase()} in ${c.value}. We've got your request${d.value?` ("${d.value.slice(0,80)}")`:""}.\n\n${urgent?"Since this sounds urgent, a technician will call you within 30 minutes.":"We'll call you within 2 business hours to book a time."}\n\nQuick tip while you wait: ${tips[s.value]}\n\nTalk soon,\nFraser Valley Plumbing Co. (DEMO)`;
+t.textContent="in 1.2 seconds";out.style.display="block";out.scrollIntoView({behavior:"smooth"})};
+</script></body></html>
